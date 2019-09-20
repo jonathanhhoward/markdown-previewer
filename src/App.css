@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+.card-deck .card {
+    margin-bottom: unset;
+}
+
+.Card {
+    margin: 2vh;
+    max-height: 96vh;
+}
+
+@media (orientation: portrait) {
+    .Card {
+        min-width: 60%;
+    }
+
+    #Editor {
+        height: 24vh;
+    }
+
+    #Preview {
+        height: 70vh;
+    }
+}
