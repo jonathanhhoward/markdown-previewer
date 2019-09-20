@@ -3,6 +3,7 @@ import marked from 'marked'
 import DOMPurify from 'dompurify'
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
+import './App.css'
 
 const INITIAL_MARKDOWN = '# Header\n' +
   '## Sub header\n' +
@@ -10,7 +11,7 @@ const INITIAL_MARKDOWN = '# Header\n' +
   'inline `code`\n' +
   '~~~\nBlock code\n~~~\n' +
   '* List item\n\n' +
-  '> Block quote\n' +
+  '> Block quote\n\n' +
   '![image](favicon.ico)\n' +
   '__Bold text__\n'
 
@@ -18,16 +19,15 @@ class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = { input: INITIAL_MARKDOWN }
-    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange (event) {
+  handleChange = (event) => {
     this.setState({ input: event.target.value })
   }
 
   render () {
     return (
-      <CardDeck>
+      <CardDeck className="bg-secondary m-0 vh-100">
         <Editor text={this.state.input} onChange={this.handleChange}/>
         <Preview text={this.state.input}/>
       </CardDeck>
@@ -37,10 +37,10 @@ class App extends React.Component {
 
 function Editor (props) {
   return (
-    <Card bg="light">
-      <Card.Header>Editor</Card.Header>
-      <Card.Body id="editor" as="textarea" onChange={props.onChange}
-                 value={props.text}/>
+    <Card border="dark" className="Card" id="Editor">
+      <Card.Header className="bg-dark text-info">Editor</Card.Header>
+      <Card.Body as="textarea" className="bg-light overflow-auto" id="editor"
+                 onChange={props.onChange} value={props.text}/>
     </Card>
   )
 }
@@ -49,9 +49,10 @@ function Preview (props) {
   const DANGEROUS = marked(props.text, { breaks: true })
   const SAFE = DOMPurify.sanitize(DANGEROUS)
   return (
-    <Card bg="light">
-      <Card.Header>Preview</Card.Header>
-      <Card.Body id="preview" dangerouslySetInnerHTML={{ __html: SAFE }}/>
+    <Card border="dark" className="Card" id="Preview">
+      <Card.Header className="bg-dark text-info">Preview</Card.Header>
+      <Card.Body className="bg-light overflow-auto" id="preview"
+                 dangerouslySetInnerHTML={{ __html: SAFE }}/>
     </Card>
   )
 }
