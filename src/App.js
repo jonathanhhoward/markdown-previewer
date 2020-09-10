@@ -1,10 +1,8 @@
 import React from 'react'
-import marked from 'marked'
-import DOMPurify from 'dompurify'
-import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
+import Editor from './components/Editor'
+import Preview from './components/Preview'
 import './App.css'
-import { Editor } from './components/Editor'
 
 const INITIAL_MARKDOWN = '# Header\n' +
   '## Sub header\n' +
@@ -34,18 +32,6 @@ class App extends React.Component {
       </CardDeck>
     )
   }
-}
-
-function Preview (props) {
-  const DANGEROUS = marked(props.text, { breaks: true })
-  const SAFE = DOMPurify.sanitize(DANGEROUS)
-  return (
-    <Card border="dark" className="Card" id="Preview">
-      <Card.Header className="bg-dark text-info">Preview</Card.Header>
-      <Card.Body className="bg-light overflow-auto" id="preview"
-                 dangerouslySetInnerHTML={{ __html: SAFE }}/>
-    </Card>
-  )
 }
 
 export default App
