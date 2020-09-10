@@ -4,15 +4,19 @@ import Editor from './components/Editor'
 import Preview from './components/Preview'
 import './App.css'
 
-const INITIAL_MARKDOWN = '# Header\n' +
-  '## Sub header\n' +
-  '[Google](https://google.com)\n' +
-  'inline `code`\n' +
-  '~~~\nBlock code\n~~~\n' +
-  '* List item\n\n' +
-  '> Block quote\n\n' +
-  '![image](favicon.ico)\n' +
-  '__Bold text__\n'
+const INITIAL_MARKDOWN = `# Header
+## Sub header
+[Google](https://google.com)
+inline \`code\`
+~~~
+Block code
+~~~
+* List item
+
+> Block quote
+
+![image](favicon.ico)
+__Bold text__`
 
 class App extends React.Component {
   constructor (props) {
