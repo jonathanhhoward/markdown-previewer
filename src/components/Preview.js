@@ -8,7 +8,7 @@ function Preview ({ text }) {
   const SAFE = DOMPurify.sanitize(DANGEROUS)
   return (
     <Card
-      border="dark"
+      bg="dark"
       className="Card"
       id="Preview"
     >

@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card'
 function Editor ({ onChange, text }) {
   return (
     <Card
-      border="dark"
+      bg="dark"
       className="Card"
       id="Editor"
     >
