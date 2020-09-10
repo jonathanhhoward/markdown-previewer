@@ -4,6 +4,7 @@ import DOMPurify from 'dompurify'
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
 import './App.css'
+import { Editor } from './components/Editor'
 
 const INITIAL_MARKDOWN = '# Header\n' +
   '## Sub header\n' +
@@ -33,16 +34,6 @@ class App extends React.Component {
       </CardDeck>
     )
   }
-}
-
-function Editor (props) {
-  return (
-    <Card border="dark" className="Card" id="Editor">
-      <Card.Header className="bg-dark text-info">Editor</Card.Header>
-      <Card.Body as="textarea" className="bg-light overflow-auto" id="editor"
-                 onChange={props.onChange} value={props.text}/>
-    </Card>
-  )
 }
 
 function Preview (props) {
