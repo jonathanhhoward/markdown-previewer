@@ -16,7 +16,7 @@ Block code
 
 > Block quote
 
-![image](favicon.ico)
+![image](favicon.png)
 __Bold text__`
 
   const [input, setInput] = useState(initialState)
