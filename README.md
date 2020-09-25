@@ -2,8 +2,12 @@
 
 This is my solution to the Front End Libraries project Markdown Previewer for freeCodeCamp.
 
-For the **project description** click [here](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer).
+## Links
 
-To see it **live** click [here](https://jonathanhhoward.github.io/markdown-previewer).
+[Project Description](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer)
+
+[Live Version](https://jonathanhhoward.github.io/markdown-previewer)
+
+## License
 
 &copy; Jonathan Howard 2020
