@@ -35,5 +35,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://jonathanhhoward.github.io/markdown-previewer"
+  "homepage": "https://jonathanhhoward.github.io/markdown-previewer",
+  "devDependencies": {
+    "prettier": "2.1.2"
+  }
 }
