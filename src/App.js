@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import CardDeck from 'react-bootstrap/CardDeck'
-import Editor from './components/Editor'
-import Preview from './components/Preview'
-import './App.css'
+import React, { useState } from "react";
+import CardDeck from "react-bootstrap/CardDeck";
+import Editor from "./components/Editor";
+import Preview from "./components/Preview";
+import "./App.css";
 
 function App () {
   const initialState = `# Header
@@ -17,12 +17,12 @@ Block code
 > Block quote
 
 ![image](favicon.png)
-__Bold text__`
+__Bold text__`;
 
-  const [input, setInput] = useState(initialState)
+  const [input, setInput] = useState(initialState);
 
   function handleChange ({ target }) {
-    setInput(target.value)
+    setInput(target.value);
   }
 
   return (
@@ -30,7 +30,7 @@ __Bold text__`
       <Editor text={input} onChange={handleChange}/>
       <Preview text={input}/>
     </CardDeck>
-  )
+  );
 }
 
-export default App
+export default App;

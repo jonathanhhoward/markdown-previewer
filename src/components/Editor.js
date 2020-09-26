@@ -1,5 +1,5 @@
-import React from 'react'
-import Card from 'react-bootstrap/Card'
+import React from "react";
+import Card from "react-bootstrap/Card";
 
 function Editor ({ onChange, text }) {
   return (
@@ -13,7 +13,7 @@ function Editor ({ onChange, text }) {
         value={text}
       />
     </Card>
-  )
+  );
 }
 
-export default Editor
+export default Editor;
