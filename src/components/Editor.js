@@ -1,7 +1,7 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
+import React from 'react';
+import Card from 'react-bootstrap/Card';
 
-function Editor ({ onChange, text }) {
+function Editor({ onChange, text }) {
   return (
     <Card bg="dark" className="Card" id="Editor">
       <Card.Header className="bg-dark text-info">Editor</Card.Header>

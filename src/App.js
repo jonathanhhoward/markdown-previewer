@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import CardDeck from "react-bootstrap/CardDeck";
-import Editor from "./components/Editor";
-import Preview from "./components/Preview";
-import "./App.css";
+import React, { useState } from 'react';
+import CardDeck from 'react-bootstrap/CardDeck';
+import Editor from './components/Editor';
+import Preview from './components/Preview';
+import './App.css';
 
-function App () {
+function App() {
   const initialState = `# Header
 ## Sub header
 [Google](https://google.com)
@@ -21,14 +21,14 @@ __Bold text__`;
 
   const [input, setInput] = useState(initialState);
 
-  function handleChange ({ target }) {
+  function handleChange({ target }) {
     setInput(target.value);
   }
 
   return (
     <CardDeck className="bg-secondary m-0 vh-100">
-      <Editor text={input} onChange={handleChange}/>
-      <Preview text={input}/>
+      <Editor text={input} onChange={handleChange} />
+      <Preview text={input} />
     </CardDeck>
   );
 }

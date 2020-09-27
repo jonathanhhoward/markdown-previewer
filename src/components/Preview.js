@@ -1,9 +1,9 @@
-import React from "react";
-import Card from "react-bootstrap/Card";
-import marked from "marked";
-import DOMPurify from "dompurify";
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import marked from 'marked';
+import DOMPurify from 'dompurify';
 
-function Preview ({ text }) {
+function Preview({ text }) {
   const DANGEROUS = marked(text, { breaks: true });
   const SAFE = DOMPurify.sanitize(DANGEROUS);
   return (
